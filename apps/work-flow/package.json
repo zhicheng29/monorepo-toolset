@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
+    "@logicflow/core": "^2.0.7",
+    "@logicflow/extension": "^2.0.11",
     "@repo/ui": "workspace:*",
     "antd": "^5.20.2",
     "axios": "^1.7.4",
