@@ -6,13 +6,13 @@ import FlowContainer from "./components/FlowContainer";
 
 const Flow: React.FC = () => {
   return (
-    <React.Fragment>
+    <div className="flex flex-col h-full w-full">
       <FlowHeader />
-      <div className="flex h-[calc(100%-80px)] w-full">
+      <div className="flex flex-1 w-full overflow-hidden">
         <FlowSiderNode />
         <FlowContainer />
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
