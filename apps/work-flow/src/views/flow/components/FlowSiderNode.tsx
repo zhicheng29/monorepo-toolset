@@ -96,7 +96,7 @@ const SiderNode: React.FC = () => {
     }
   ];
   return (
-    <div className="flex flex-col bg-[#f7f7fa] py-3 w-60">
+    <div className="flex flex-col bg-[#f7f7fa] py-3 w-60 border-r">
       <div className="flex items-center justify-between px-4 mb-3">
         <div className="text-lg">选择节点</div>
         <Button icon={<MenuFoldOutlined />} size="small" />

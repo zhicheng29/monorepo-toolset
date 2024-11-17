@@ -1,7 +1,9 @@
-import LogicFlow from "@logicflow/core";
 import { useEffect, useRef } from "react";
+import LogicFlow from "@logicflow/core";
+import { Control } from "@logicflow/extension";
 
 import "@logicflow/core/dist/index.css";
+import "@logicflow/extension/lib/style/index.css";
 
 const FlowContainer: React.FC = () => {
   const refContainer = useRef(null);
@@ -34,12 +36,26 @@ const FlowContainer: React.FC = () => {
   };
   useEffect(() => {
     if (refContainer.current) {
+      LogicFlow.use(Control);
       const lf = new LogicFlow({
-        container: refContainer.current,
-        grid: true
+        container: refContainer.current!,
+        stopScrollGraph: true,
+        grid: {
+          visible: true,
+          config: {
+            color: "#eceeef",
+            thickness: 1
+          }
+        },
+        keyboard: {
+          enabled: true
+        },
+        background: {
+          backgroundColor: "#f2f3f5"
+        }
       });
       lf.render(data);
-      lf.translateCenter();
+      lf.translateCenter(); // 将图形移动到画布中央
     }
   }, []);
 
