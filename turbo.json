@@ -13,13 +13,13 @@
       "outputs": ["dist/**"],
       "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
-    "flow-config#dev": {
+    "work-flow#dev": {
       "dependsOn": ["@repo/viteconfig#build"],
       "cache": false,
       "persistent": true,
       "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
-    "flow-config#build": {
+    "work-flow#build": {
       "dependsOn": ["@repo/viteconfig#build"],
       "outputs": ["dist/**"],
       "env": [".env.development.local", ".env.development", ".env.local", ".env"]
